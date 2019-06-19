@@ -428,9 +428,9 @@ a.text-dark:focus {
 }
 
 .about p {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 36px;
+    line-height: 24px;
     text-align: justify;
     letter-spacing: 1px;
 }
