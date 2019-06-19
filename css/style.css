@@ -398,7 +398,7 @@ a.text-dark:focus {
 /*  關於我們  */
 
 .about {
-    height: 100vh;
+    min-height: 100vh;
     background-image: url(../images/bg-profile.jpg);
     background-repeat: no-repeat;
     background-position: 0% 50%;
