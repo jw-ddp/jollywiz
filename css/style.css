@@ -1,0 +1,564 @@
+@charset "utf-8";
+
+
+/*-----------------------------------------------------------------------------------*/
+
+
+/*  基本樣式
+/*-----------------------------------------------------------------------------------*/
+
+html {
+    font-size: 15px;
+}
+
+body {
+    font-family: 'FuturaStdMedium', 'Noto Sans TC', Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif;
+    overflow-x: hidden;
+    background-color: #fbfbfb;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+body,
+li,
+address {
+    line-height: 24px;
+}
+
+input,
+button,
+select,
+textarea {
+    font-family: 'FuturaStdMedium', 'Noto Sans TC', Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+a {
+    color: #e95405;
+    -webkit-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+}
+
+a:hover,
+a:focus {
+    color: #e95405;
+    text-decoration: none;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    border: 3px solid #292929; 
+    height: 200px;
+    background-color: #474747;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 5px;
+    background-color: #292929;
+}
+
+.container {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.row {
+    margin-right: -20px;
+    margin-left: -20px;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12,
+.col,
+.col-auto,
+.col-sm-1,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm,
+.col-sm-auto,
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md,
+.col-md-auto,
+.col-lg-1,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg,
+.col-lg-auto,
+.col-xl-1,
+.col-xl-2,
+.col-xl-3,
+.col-xl-4,
+.col-xl-5,
+.col-xl-6,
+.col-xl-7,
+.col-xl-8,
+.col-xl-9,
+.col-xl-10,
+.col-xl-11,
+.col-xl-12,
+.col-xl,
+.col-xl-auto {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+
+.bg-dark {
+    background-color: #212121 !important;
+}
+
+a.bg-dark:hover,
+a.bg-dark:focus,
+button.bg-dark:hover,
+button.bg-dark:focus {
+    background-color: #101010 !important;
+}
+
+.text-dark {
+    color: #333 !important;
+}
+
+a.text-dark:hover,
+a.text-dark:focus {
+    color: #111 !important;
+}
+
+.section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+    .section {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}
+
+.head-title {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 45px;
+    text-transform: uppercase;
+}
+
+.sub-title {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'FuturaStdLight', 'Noto Sans TC', Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  導覽列
+/*-----------------------------------------------------------------------------------*/
+
+.navbar-custom .navbar-brand {
+    color: #fff;
+}
+
+.navbar-custom .navbar-brand img {
+    width: 125px;
+}
+
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus {
+    color: #e95405;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    font-family: 'FuturaStdMedium', 'Noto Sans TC', Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 1);
+    padding: 10px;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover,
+.navbar-custom .navbar-nav .nav-link:focus {
+    color: #e95405;
+}
+
+.navbar-custom .navbar-nav .nav-link.disabled {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.navbar-custom .navbar-nav .show>.nav-link,
+.navbar-custom .navbar-nav .active>.nav-link,
+.navbar-custom .navbar-nav .nav-link.show,
+.navbar-custom .navbar-nav .nav-link.active {
+    color: #e95405;
+}
+
+
+.navbar-custom .navbar-toggler {
+    font-size: 12px;
+    line-height: 1;
+    border-radius: 3px;
+    color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: transparent;
+    padding: 10px;
+    -webkit-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+}
+
+.navbar-custom .navbar-toggler:hover,
+.navbar-toggler:focus {
+    text-decoration: none;
+    color: #212121;
+    border: 1px solid transparent;
+    background-color: rgba(233, 84, 5, 0.9);
+}
+
+.navbar-custom .navbar-toggler:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.navbar-custom .collapse li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-custom .collapse li:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+}
+
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .navbar-custom .collapse li {
+        border-bottom: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .navbar-expand-xl .navbar-nav .nav-link {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .navbar-custom .collapse li {
+        border-bottom: none;
+    }
+}
+
+
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  形象區
+/*-----------------------------------------------------------------------------------*/
+
+.full-screen {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-image: none !important;
+    filter: none !important;
+}
+
+.carousel .carousel-control-prev,
+.carousel .carousel-control-next,
+.carousel-indicators {
+    opacity: 0;
+    /* Firefox */
+    -moz-transition-property: opacity;
+    -moz-transition-duration: 0.2s;
+    -moz-transition-delay: 0.2s;
+    /* WebKit */
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 0.2s;
+    -webkit-transition-delay: 0.2s;
+    /* Opera */
+    -o-transition-property: opacity;
+    -o-transition-duration: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next,
+.carousel:hover .carousel-indicators {
+    opacity: 1.0;
+}
+
+.carousel-indicators li {
+    width: 30px;
+    height: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-15%);
+    -webkit-transform: translateY(-15%);
+}
+
+.carousel-caption.inner {
+    top: 50%;
+    transform: translateY(-65%);
+    -webkit-transform: translateY(-65%);
+}
+
+.carousel-caption h1 {
+    font-family: 'FuturaStdMedium', 'Noto Sans TC', Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.carousel-caption p {
+    font-family: 'FuturaStdMedium', 'Noto Sans TC', Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+.carousel-control-prev,
+.carousel-control-next i {
+    font-size: 40px;
+}
+
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  公司簡介
+/*-----------------------------------------------------------------------------------*/
+/*  關於我們  */
+
+.about {
+    background-image: url(../images/bg-profile.jpg);
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    background-attachment: fixed;
+}
+
+.about .content {
+    width: 90%;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 45px 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 992px) {
+    .about .content {
+        width: 80%;
+        padding: 45px 45px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .about .content {
+        width: 60%;
+    }
+}
+
+.about p {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: justify;
+    letter-spacing: 1px;
+}
+
+@media (min-width: 992px) {
+    .about p {
+        font-size: 15px;
+        line-height: 1.8rem;
+
+    }
+}
+
+
+
+/*  發展歷程  */
+.history {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../images/bg-timeline.jpg');
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    background-attachment: fixed;
+}
+
+.history .content {
+    width: 60%;
+    background: transparent;
+    padding: 45px 0 0 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.history .timeline {
+    width: 100%;
+    padding: 45px 45px 0 45px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.history .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(20% + 20px);
+    bottom: 0px;
+    width: 3px;
+    background: rgba(233, 84, 5, 0.3);
+}
+
+.history .timeline::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.history .entry {
+    clear: both;
+    text-align: left;
+    position: relative;
+}
+
+.history .entry .title {
+    font-size: 24px;
+    float: left;
+    width: 20%;
+    padding-right: 20px;
+    text-align: right;
+    position: relative;
+}
+
+.history .entry .title::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #e95405;
+    border-radius: 100%;
+    top: 15%;
+    right: 0px;
+    z-index: 99;
+}
+
+.history .entry h3 {
+    font-size: 20px; 
+    height: 16px;
+    font-weight: 500;
+    color: #e95405;
+}
+
+.history .body {
+    margin-bottom: 30px;
+    float: right;
+    width: 80%;
+    padding-left: 20px;
+}
+
+.history .body p {
+    font-weight: 300;
+    color: #fff;
+}
+
+/* 獲獎榮譽 */
+.awards {
+    background-color: #fff;
+}
+
+.awards img {
+    max-width: 125px;
+    margin: 0 auto;
+}
+
+.awards h4 {
+    font-weight: 700;
+    line-height: 1px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+/* 主要股東 */
+.investors {
+    background-color: #eee;
+}
+
+.investors img {
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.investors li {
+    padding: 10px 75px;
+    display: inline-block;
+}
