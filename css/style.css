@@ -398,7 +398,6 @@ a.text-dark:focus {
 /*  關於我們  */
 
 .about {
-    min-height: 100vh;
     background-image: url(../images/bg-profile.jpg);
     background-repeat: no-repeat;
     background-position: 0% 50%;
@@ -442,12 +441,26 @@ a.text-dark:focus {
 }
 
 .history .content {
-    width: 60%;
+    width: 100%;
     background: transparent;
-    padding: 45px 0 0 0;
+    padding: 0px 0 0 0;
     margin-left: auto;
     margin-right: auto;
 }
+
+@media (min-width: 992px) {
+    .history .content {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .history .content {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
 
 .history .timeline {
     width: 100%;
