@@ -448,23 +448,9 @@ a.text-dark:focus {
     margin-right: auto;
 }
 
-@media (min-width: 992px) {
-    .history .content {
-        width: 80%;
-    }
-}
-
-@media (min-width: 1200px) {
-    .history .content {
-        width: 100%;
-        margin: 0 auto;
-    }
-}
-
-
 .history .timeline {
     width: 100%;
-    padding: 45px 45px 0 45px;
+    padding: 20px 0px 0 0px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -474,10 +460,22 @@ a.text-dark:focus {
     content: '';
     position: absolute;
     top: 0;
-    left: calc(20% + 20px);
+    left: calc(20% + 3px);
     bottom: 0px;
     width: 3px;
     background: rgba(233, 84, 5, 0.3);
+}
+
+@media (min-width: 1200px) {
+    .history .timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: calc(30%);
+        bottom: 0px;
+        width: 3px;
+        background: rgba(233, 84, 5, 0.3);
+    }
 }
 
 .history .timeline::after {
@@ -501,6 +499,18 @@ a.text-dark:focus {
     position: relative;
 }
 
+@media (min-width: 768px) {
+    .history .entry .title {
+        width: 25%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .history .entry .title {
+        width: 30%;
+    }
+}
+
 .history .entry .title::before {
     content: '';
     position: absolute;
@@ -509,12 +519,12 @@ a.text-dark:focus {
     background-color: #e95405;
     border-radius: 100%;
     top: 15%;
-    right: 0px;
+    left: 99%;
     z-index: 99;
 }
 
 .history .entry h3 {
-    font-size: 20px; 
+    font-size: 16px; 
     height: 16px;
     font-weight: 500;
     color: #e95405;
@@ -525,6 +535,18 @@ a.text-dark:focus {
     float: right;
     width: 80%;
     padding-left: 20px;
+}
+
+@media (min-width: 768px) {
+    .history .body {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .history .body {
+        width: 70%;
+    }
 }
 
 .history .body p {
