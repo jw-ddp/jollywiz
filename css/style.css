@@ -2,8 +2,6 @@
 
 
 /*-----------------------------------------------------------------------------------*/
-
-
 /*  基本樣式
 /*-----------------------------------------------------------------------------------*/
 
@@ -50,10 +48,10 @@ a:focus {
 p {
     padding: 0;
     margin: 0;
-    font-size: 16px;
-    letter-spacing: 1px;
+    font-size: 14px;
+    letter-spacing: 0.1rem;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 1.5rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -69,91 +67,6 @@ p {
     height: 5px;
     background-color: #292929;
 }
-
-.container {
-    padding-right: 20px;
-    padding-left: 20px;
-}
-
-.row {
-    margin-right: -20px;
-    margin-left: -20px;
-}
-
-.col-1,
-.col-2,
-.col-3,
-.col-4,
-.col-5,
-.col-6,
-.col-7,
-.col-8,
-.col-9,
-.col-10,
-.col-11,
-.col-12,
-.col,
-.col-auto,
-.col-sm-1,
-.col-sm-2,
-.col-sm-3,
-.col-sm-4,
-.col-sm-5,
-.col-sm-6,
-.col-sm-7,
-.col-sm-8,
-.col-sm-9,
-.col-sm-10,
-.col-sm-11,
-.col-sm-12,
-.col-sm,
-.col-sm-auto,
-.col-md-1,
-.col-md-2,
-.col-md-3,
-.col-md-4,
-.col-md-5,
-.col-md-6,
-.col-md-7,
-.col-md-8,
-.col-md-9,
-.col-md-10,
-.col-md-11,
-.col-md-12,
-.col-md,
-.col-md-auto,
-.col-lg-1,
-.col-lg-2,
-.col-lg-3,
-.col-lg-4,
-.col-lg-5,
-.col-lg-6,
-.col-lg-7,
-.col-lg-8,
-.col-lg-9,
-.col-lg-10,
-.col-lg-11,
-.col-lg-12,
-.col-lg,
-.col-lg-auto,
-.col-xl-1,
-.col-xl-2,
-.col-xl-3,
-.col-xl-4,
-.col-xl-5,
-.col-xl-6,
-.col-xl-7,
-.col-xl-8,
-.col-xl-9,
-.col-xl-10,
-.col-xl-11,
-.col-xl-12,
-.col-xl,
-.col-xl-auto {
-    padding-right: 0px;
-    padding-left: 0px;
-}
-
 
 .bg-dark {
     background-color: #212121 !important;
@@ -198,7 +111,7 @@ a.text-dark:focus {
     font-size: 18px;
     font-weight: 500;
     font-family: 'FuturaStdLight', 'Noto Sans TC', Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif;
-    line-height: 18px;
+    line-height: 1.5rem;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -410,6 +323,8 @@ a.text-dark:focus {
     padding: 45px 30px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 @media (min-width: 992px) {
@@ -425,11 +340,21 @@ a.text-dark:focus {
     }
 }
 
-.about p {
+.about .content p {
+    font-size: 18px;
     text-align: justify;
+    line-height: 1.5rem;
+    letter-spacing: 0.1rem;
 }
 
-
+@media (min-width: 576px) {
+    .about .content p {
+        font-size: 16px;
+        text-align: justify;
+        line-height: 1.5rem;
+        letter-spacing: 0.1rem;
+    }
+}
 
 
 /*  發展歷程  */
@@ -460,10 +385,34 @@ a.text-dark:focus {
     content: '';
     position: absolute;
     top: 0;
-    left: calc(20% + 3px);
+    left: calc(15% + 3px);
     bottom: 0px;
     width: 3px;
     background: rgba(233, 84, 5, 0.3);
+}
+
+@media (min-width: 768px) {
+    .history .timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: calc(15% + 3px);
+        bottom: 0px;
+        width: 3px;
+        background: rgba(233, 84, 5, 0.3);
+    }
+}
+
+@media (min-width: 992px) {
+    .history .timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: calc(25% + 2px);
+        bottom: 0px;
+        width: 3px;
+        background: rgba(233, 84, 5, 0.3);
+    }
 }
 
 @media (min-width: 1200px) {
@@ -471,7 +420,7 @@ a.text-dark:focus {
         content: '';
         position: absolute;
         top: 0;
-        left: calc(30%);
+        left: calc(35%);
         bottom: 0px;
         width: 3px;
         background: rgba(233, 84, 5, 0.3);
@@ -493,7 +442,7 @@ a.text-dark:focus {
 .history .entry .title {
     font-size: 24px;
     float: left;
-    width: 20%;
+    width: 15%;
     padding-right: 20px;
     text-align: right;
     position: relative;
@@ -501,13 +450,19 @@ a.text-dark:focus {
 
 @media (min-width: 768px) {
     .history .entry .title {
+        width: 15%;
+    }
+}
+
+@media (min-width: 992px) {
+    .history .entry .title {
         width: 25%;
     }
 }
 
 @media (min-width: 1200px) {
     .history .entry .title {
-        width: 30%;
+        width: 35%;
     }
 }
 
@@ -533,19 +488,25 @@ a.text-dark:focus {
 .history .body {
     margin-bottom: 30px;
     float: right;
-    width: 80%;
+    width: 85%;
     padding-left: 20px;
 }
 
 @media (min-width: 768px) {
     .history .body {
-        width: 70%;
+        width: 85%;
+    }
+}
+
+@media (min-width: 992px) {
+    .history .body {
+        width: 75%;
     }
 }
 
 @media (min-width: 1200px) {
     .history .body {
-        width: 70%;
+        width: 65%;
     }
 }
 
@@ -556,12 +517,12 @@ a.text-dark:focus {
 
 /* 獲獎榮譽 */
 .awards {
-    background-color: #fff;
+    background-color: #f1f1f1;
 }
 
 .awards img {
     max-width: 125px;
-    margin: 0 auto;
+    margin-top: 20px;
 }
 
 .awards h4 {
@@ -573,15 +534,28 @@ a.text-dark:focus {
 
 /* 主要股東 */
 .investors {
-    background-color: #eee;
+    background-color: #fff;
 }
 
 .investors img {
-    max-width: 250px;
+    width: 60%;
     margin: 0 auto;
 }
 
-.investors li {
-    padding: 10px 75px;
-    display: inline-block;
+@media (min-width: 576px) {
+    .investors img {
+        width: 45%;
+    }
+}
+
+@media (min-width: 992px) {
+    .investors img {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .investors img {
+        width: 70%;
+    }
 }
